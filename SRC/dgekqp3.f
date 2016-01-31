@@ -345,7 +345,7 @@
 *
 *              Factorize JB columns among columns J:N.
 *
-               print *, "CALL DLAQPS",M,N-J+1,J-1,JB
+*               print *, "CALL DLAQPS",M,N-J+1,J-1,JB
                CALL DLAQPS( M, N-J+1, J-1, JB, FJB, A( 1, J ), LDA,
      $                      JPVT( J ), TAU( J ), WORK( J ), WORK( N+J ),
      $                      WORK( 2*N+1 ), WORK( 2*N+JB+1 ), N-J+1 )
@@ -364,7 +364,7 @@
 
 *         IF( J.LE.MINMN )
          IF( J.LE.K ) THEN
-           print *, "CALL DLAKQP2",M,N-J+1,J-1,K
+*           print *, "CALL DLAKQP2",M,N-J+1,J-1,K
            CALL DLAKQP2( M, N-J+1, J-1, A( 1, J ), LDA, K, JPVT( J ),
      $                   TAU( J ), WORK( J ), WORK( N+J ),
      $                   WORK( 2*N+1 ) )
